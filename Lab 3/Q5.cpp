@@ -31,15 +31,18 @@ int main(){
         }
         cout<<endl;
     }
-    
-    for (int i = 0; i <row; i++){
-        cout<<i+1<<" row total is : "<<rowTotal[i]<<endl;
-        cout<<i+1<<" row max is : "<<maxRow[i]<<endl;
-    }
-        for(int j=0;j<col;j++){
-        cout<<j+1<<" col total is : "<<colTotal[j]<<endl;
-        cout<<j+1<<" col max is : "<<maxCol[j]<<endl;
-        }
+    cout<<"Which row total to know : ";
+    cin>>rowI;
+    cout<<rowI<<" row total is : "<<rowTotal[rowI-1]<<endl;
+    cout<<"Which row max to know : ";
+    cin>>rowI;
+    cout<<rowI<<" row max is : "<<maxRow[rowI-1]<<endl;
+    cout<<"Which col total to know : ";
+    cin>>colI;
+    cout<<colI<<" col total is : "<<rowTotal[colI-1]<<endl;
+    cout<<"Which col max to know : ";
+    cin>>colI;
+    cout<<colI<<" row max is : "<<maxRow[colI-1]<<endl;
     avg=sum/(row*col);
     cout<<"Sum of all the elements in 2d array is :"<<sum<<endl;
     cout<<"Average of all the elements in 2d array is :"<<avg<<endl;
