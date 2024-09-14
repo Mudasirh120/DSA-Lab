@@ -39,10 +39,10 @@ int main(){
     cout<<rowI<<" row max is : "<<maxRow[rowI-1]<<endl;
     cout<<"Which col total to know : ";
     cin>>colI;
-    cout<<colI<<" col total is : "<<rowTotal[colI-1]<<endl;
+    cout<<colI<<" col total is : "<<colTotal[colI-1]<<endl;
     cout<<"Which col max to know : ";
     cin>>colI;
-    cout<<colI<<" row max is : "<<maxRow[colI-1]<<endl;
+    cout<<colI<<" Col max is : "<<maxCol[colI-1]<<endl;
     avg=sum/(row*col);
     cout<<"Sum of all the elements in 2d array is :"<<sum<<endl;
     cout<<"Average of all the elements in 2d array is :"<<avg<<endl;
