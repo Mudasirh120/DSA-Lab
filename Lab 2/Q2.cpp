@@ -29,5 +29,8 @@ int main(){
         sumArray[i]=Arr1[i]+Arr2[i]+Arr3[i];
         cout<<i+1<<" element's sum is : "<<sumArray[i]<<endl;
     }
-    
+    delete [] Arr1;
+    delete [] Arr2;
+    delete [] Arr3;
+    delete [] sumArray;
 }    

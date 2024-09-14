@@ -31,5 +31,6 @@ int main(){
     cout<<"To check another target , Press 1 , to quit press 0 : ";
     cin>>check;
     }
+    delete[] Arr;
     return 0;
 }
