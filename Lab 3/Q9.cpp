@@ -2,7 +2,7 @@
 using namespace std;
 class Calculator{
    private:
-   int num1=0,num2=0,answer=1;
+   int num1=0,num2=0,answer=0;
    char opCode;
    public:
    Calculator(){
@@ -11,19 +11,19 @@ class Calculator{
    }
    void Menu(){
         cout<<"Choose an Operation : "<<endl;
-        cout<<"1.'+' for Addition"<<endl;
-        cout<<"2.'-' for Subtraction"<<endl;
-        cout<<"3.'*' for Multiplication"<<endl;
-        cout<<"4.'/' for Division"<<endl;
-        cout<<"5.'^' for Power"<<endl;
-        cout<<"6.'x' for EXIT"<<endl;
+        cout<<"'+' for Addition"<<endl;
+        cout<<"'-' for Subtraction"<<endl;
+        cout<<"'*' for Multiplication"<<endl;
+        cout<<"'/' for Division"<<endl;
+        cout<<"'^' for Power"<<endl;
+        cout<<"'x' for EXIT"<<endl;
         getOpCode();
     }
    char getOpCode(){
         cout<<"Choose an OpCode : ";
         cin>>this->opCode;
         while(this->opCode!= '+' && this->opCode!='/' && this->opCode!='-' && this->opCode!='*' && this->opCode!='^' && this->opCode!='x'){
-        cout<<"Choose only between (+,-,*,/,^) : ";
+        cout<<"Choose only between (+,-,*,/,^,x) : ";
         cin>>this->opCode;
         }
         getOperation();
@@ -56,13 +56,15 @@ class Calculator{
             showResult();
             break;
             case 'x':
-              return 0;
+            return 0;
         }
      }    
     void getNumbers(){
-        cout<<"Choose fist Number : ";
+        
+        cout<<"Choose first Number : ";
         cin>>this->num1;
-        cout<<"Choose fist Number : ";
+        cout<<"Second Number will "<<this->opCode<<endl;
+        cout<<"Choose Second Number : ";
         cin>>this->num2;
     }
     int Addition (int a, int b){
@@ -78,6 +80,7 @@ class Calculator{
         return a*b;
     } 
     int Pow (int number, int pow){
+        answer=1;
         for(int i=0;i<pow;i++){
             this->answer*=number;
         }
