@@ -9,7 +9,7 @@ class queue{
     queue(){
      front=-1;   // initializing from -1 to maintain proper indexing.
      rear=-1;
-    };
+    }
     int size(){
         return (rear+1);
     }
@@ -36,7 +36,7 @@ class queue{
         if(rear>-1){
             cout<<arr[front]<<" Dequeued."<<endl;
             front++;
-            return arr[front-1]; // returning at the time of dequeueping if needed , can be stored in some variable.
+            return arr[front-1]; // returning at the time of dequeuing if needed , can be stored in some variable.
         }else{
             cout<<"isEmpty queue , dequeue() error."<<endl;
             return 0;
@@ -50,6 +50,7 @@ class queue{
         cout<< "Empty Stack"<<endl;
         return 0;
      }
+     }
     void clear(){
       if(front>-1 && rear>-1){
        front=-1;
@@ -59,7 +60,6 @@ class queue{
         cout<<"Already isEmpty."<<endl;
       }
      }
-   
     void display(){
         if(!isEmpty()){
         for(int i=0;i<=rear;i++){
@@ -76,13 +76,11 @@ class queue{
 int main(){
 queue myqueue;
  cout<<"isEmpty : "<<myqueue.isEmpty()<<endl;
-  mystack.peek();
  myqueue.enqueue(3);
  myqueue.enqueue(4);
  myqueue.enqueue(5);
- cout<<myqueue.size()<<endl;
  myqueue.display();
- cout<< mystack.peek();
+ cout<<myqueue.size()<<endl;
  myqueue.dequeue();
  cout<<"isEmpty : "<<myqueue.isEmpty()<<endl;
  myqueue.clear();
